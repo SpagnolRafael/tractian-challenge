@@ -62,13 +62,6 @@ class TreeBloc extends Bloc<TreeEvent, TreeState> {
       do {
         oldLength = parents.length;
         for (var e in companyAssets) {
-          // if (e.parentId == null) {
-          //   for (var j in _originalAssets) {
-          //     if (j.parentId == e.id) {
-          //       parents.add(j);
-          //     }
-          //   }
-          // }
           if (e.parentId != null) {
             final parent =
                 _originalAssets.firstWhere((asset) => e.parentId == asset.id);
